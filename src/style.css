@@ -1,0 +1,12 @@
+h1,
+p {
+  font-family: Lato;
+}
+.btn {
+  padding: 4px 12px;
+  border-radius: 4px;
+  background: #178bf8;
+  color: #fff;
+  box-shadow: none;
+  border: none;
+}
