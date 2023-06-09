@@ -2,9 +2,13 @@ import * as React from 'react';
 import { useState } from 'react';
 import GoodsDetail from './GoodsDetail';
 import Banner from './Banner';
+import Button from './Button';
 import './style.css';
 function footer() {
-  return <div>底部按钮</div>;
+  function onFooterBtnClick(event) {
+    console.log(event);
+  }
+  return <Button onClick={onFooterBtnClick}>购买</Button>;
 }
 export default function App() {
   const [count, setCount] = useState(0);
@@ -12,6 +16,9 @@ export default function App() {
     setCount(count + number);
   }
 
+  function onFooterBtnClick(event) {
+    console.log(event);
+  }
   return (
     <div>
       <button
