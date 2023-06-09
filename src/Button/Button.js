@@ -1,8 +1,18 @@
 import * as React from 'react';
-export default function Button({ size, type, disabled, children, onClick }) {
+import PropTypes from 'prop-types';
+export default function Button({ id, size, type, disabled, children, onClick }) {
   return (
-    <button disabled={disabled} onClick={onClick}>
+    <button disabled={disabled} onClick={onClick} id={id}>
       {children}
     </button>
   );
+}
+
+Button.PropTypes = {
+  size: PropTypes.oneOf(['small', 'medium', 'large']),
+  type: PropTypes.oneOf(['primary', 'secondary', 'tertiary']),
+  disabled: PropTypes.bool,
+  children: PropTypes.node.isRequired,
+  onClick: PropTypes.func,
+  id: PropTypes.number
 }
