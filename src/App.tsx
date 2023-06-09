@@ -24,7 +24,7 @@ export default function App() {
       </button>
       <p>{count}</p>
       <GoodsDetail Footer={footer()}>
-        <Banner />
+        <Banner list={[1, 2, 3]} />
       </GoodsDetail>
     </div>
   );
